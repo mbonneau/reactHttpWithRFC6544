@@ -1,0 +1,16 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:mbonneau/RFC6455.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:clue-labs/http.git"
+    }
+  ],
+  "require": {
+    "react/http": "upgrade-dev",
+    "ratchet/rfc6455": "permessage-deflate-dev"
+  }
+}

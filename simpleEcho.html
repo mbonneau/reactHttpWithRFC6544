@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo</title>
+</head>
+<body>
+Open debug console to see stuff.<br/>
+<input id="sendText"/><button name="btnSend" onclick="send()">Send</button>
+<script>
+    var ws = new WebSocket('ws://127.0.0.1:12345/');
+
+    ws.onmessage = function (event) {
+        console.log('ws message', event.data);
+    };
+
+    ws.onopen = function (event) {
+        console.log('WebSocket opened.');
+    };
+
+    function send() {
+        ws.send(document.getElementById('sendText').value);
+    }
+</script>
+
+</body>
+</html>
